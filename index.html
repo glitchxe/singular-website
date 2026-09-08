@@ -559,10 +559,30 @@
       gap: 2px; background: var(--border);
       border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
     }
+    @keyframes ctaShine {
+      0%   { transform: translateX(-120%) skewX(-18deg); }
+      100% { transform: translateX(220%) skewX(-18deg); }
+    }
     .cta-card {
       background: var(--bg); padding: 60px 52px;
       transition: background 0.3s;
+      position: relative; overflow: hidden;
     }
+    .cta-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 45%; height: 100%;
+      background: linear-gradient(105deg,
+        transparent 0%,
+        rgba(255,255,255,0.03) 40%,
+        rgba(255,255,255,0.09) 50%,
+        rgba(255,255,255,0.03) 60%,
+        transparent 100%);
+      animation: ctaShine 4s ease-in-out infinite;
+      pointer-events: none; z-index: 0;
+    }
+    .cta-card:nth-child(2)::before { animation-delay: 2s; }
+    .cta-card > * { position: relative; z-index: 1; }
     .cta-card:hover { background: var(--surface); }
     .cta-eyebrow {
       font-size: 20px; font-weight: 600;
