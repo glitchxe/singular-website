@@ -197,18 +197,22 @@
     .nav-right { display: flex; align-items: center; gap: 12px; }
     .btn-lang {
       background: none; border: 1px solid var(--border-md);
-      color: var(--text-2); padding: 5px 14px;
+      color: var(--text-2); padding: 8px 16px;
       border-radius: 20px; font-size: 11px; font-weight: 600;
       letter-spacing: 0.1em; cursor: pointer;
       transition: all 200ms var(--ease); font-family: inherit;
+      min-height: 44px; display: inline-flex; align-items: center;
+      -webkit-appearance: none; appearance: none;
     }
     .btn-lang:hover { border-color: var(--border-hover); color: var(--text-1); }
     .btn-nav-cta {
       background: var(--text-1); color: #000;
-      padding: 8px 20px; border-radius: var(--radius);
+      padding: 10px 20px; border-radius: var(--radius);
       font-size: 12px; font-weight: 700;
       text-decoration: none; letter-spacing: 0.04em;
       transition: opacity 0.2s, transform 0.2s;
+      min-height: 44px; display: inline-flex; align-items: center;
+      -webkit-appearance: none; appearance: none;
     }
     .btn-nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
 
@@ -227,7 +231,7 @@
       opacity: 0.4;
     }
     .hero-glow {
-      position: absolute; width: 700px; height: 700px;
+      position: absolute; width: min(700px, 90vw); height: min(700px, 90vw);
       border-radius: 50%;
       background: radial-gradient(ellipse, rgba(255,255,255,0.035) 0%, transparent 65%);
       top: 50%; left: 50%; transform: translate(-50%,-50%);
@@ -276,6 +280,7 @@
       background: var(--text-1); color: #000;
       padding: 14px 30px; border-radius: var(--radius);
       font-size: 13px; font-weight: 700;
+      -webkit-appearance: none; appearance: none;
       text-decoration: none; letter-spacing: 0.02em;
       display: inline-flex; align-items: center; gap: 8px;
       transition: all 200ms var(--ease);
@@ -324,7 +329,7 @@
       color: rgba(255,255,255,0.96);
     }
     .section-lead {
-      font-size: 17px; color: var(--text-2);
+      font-size: clamp(15px, 1.5vw, 17px); color: var(--text-2);
       line-height: 1.72; max-width: 640px;
     }
 
@@ -470,9 +475,10 @@
     }
     .chip {
       border: 1px solid var(--border-md);
-      color: var(--text-2); padding: 7px 18px;
+      color: var(--text-2); padding: 10px 18px;
       border-radius: 20px; font-size: 13px; font-weight: 500;
       transition: all 200ms var(--ease); cursor: default;
+      min-height: 44px; display: inline-flex; align-items: center;
     }
     .chip:hover { border-color: var(--border-hover); color: var(--text-1); }
 
@@ -528,6 +534,7 @@
       color: var(--text-2); padding: 11px 22px;
       border-radius: 24px; font-size: 14px; font-weight: 500;
       transition: all 200ms var(--ease);
+      min-height: 44px; display: inline-flex; align-items: center;
     }
     .inst-tag:hover { border-color: var(--border-hover); color: var(--text-1); }
 
@@ -573,6 +580,7 @@
       width: 100%; background: none; border: none;
       color: var(--text-1); text-align: left;
       padding: 22px 24px; font-size: 14px; font-weight: 500;
+      -webkit-appearance: none; appearance: none;
       cursor: pointer; display: flex;
       align-items: flex-start; justify-content: space-between; gap: 20px;
       font-family: inherit; line-height: 1.5;
@@ -600,7 +608,7 @@
       position: relative; overflow: hidden;
     }
     .final-glow {
-      position: absolute; width: 900px; height: 500px;
+      position: absolute; width: min(900px, 90vw); height: min(500px, 80vw);
       background: radial-gradient(ellipse, rgba(255,255,255,0.04) 0%, transparent 65%);
       top: 50%; left: 50%; transform: translate(-50%,-50%);
       pointer-events: none;
@@ -689,6 +697,22 @@
       .pillar-card { padding: 36px 28px; }
       .cta-card { padding: 44px 32px; }
       .faq-inner { gap: 40px; }
+      #navbar { padding: 0 20px; }
+      .scroll-cue { bottom: 20px; }
+    }
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 110px 16px 72px; }
+      section { padding: 64px 16px; }
+      #navbar { height: 56px; }
+      .nav-logo-img { height: 26px; }
+      .dual-cta { padding: 72px 16px; }
+      .final-cta { padding: 88px 16px; }
+    }
+    @media (max-width: 360px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-ghost { text-align: center; justify-content: center; }
     }
   </style>
 </head>
