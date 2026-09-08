@@ -1403,6 +1403,34 @@
             <text text-anchor="middle" y="5" fill="white" font-size="11" font-weight="700" font-family="Inter,sans-serif">Gobierno</text>
           </g>
 
+
+          <!-- ── NODE FLASH: pulses when traveling dot passes ── -->
+          <!-- Startups: t=0s (flash at cycle start/end) -->
+          <circle cx="200" cy="52" r="50" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" filter="url(#dotGlow)">
+            <animate attributeName="opacity" values="0.85;0;0;0;0.85" keyTimes="0;0.025;0.5;0.975;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 1 1;0.4 0 1 1;0.4 0 1 1;0.4 0 1 1"/>
+            <animate attributeName="r" values="40;56;56;40;40" keyTimes="0;0.025;0.5;0.975;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 1 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+          </circle>
+          <!-- Inversionistas: t=2.26s, fraction=0.1883 -->
+          <circle cx="347" cy="140" r="40" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" filter="url(#dotGlow)" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.85;0;0" keyTimes="0;0.163;0.188;0.213;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.2 0 0.8 1;0.2 0 1 1;0 0 1 1"/>
+            <animate attributeName="r" values="40;40;40;56;40" keyTimes="0;0.163;0.188;0.213;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0.2 0 1 1;0 0 1 1"/>
+          </circle>
+          <!-- Sector Privado: t=4.44s, fraction=0.370 -->
+          <circle cx="315" cy="308" r="40" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" filter="url(#dotGlow)" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.85;0;0" keyTimes="0;0.345;0.370;0.395;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.2 0 0.8 1;0.2 0 1 1;0 0 1 1"/>
+            <animate attributeName="r" values="40;40;40;56;40" keyTimes="0;0.345;0.370;0.395;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0.2 0 1 1;0 0 1 1"/>
+          </circle>
+          <!-- Academia: t=7.56s, fraction=0.630 -->
+          <circle cx="85" cy="308" r="40" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" filter="url(#dotGlow)" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.85;0;0" keyTimes="0;0.605;0.630;0.655;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.2 0 0.8 1;0.2 0 1 1;0 0 1 1"/>
+            <animate attributeName="r" values="40;40;40;56;40" keyTimes="0;0.605;0.630;0.655;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0.2 0 1 1;0 0 1 1"/>
+          </circle>
+          <!-- Gobierno: t=9.74s, fraction=0.8117 -->
+          <circle cx="53" cy="140" r="40" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="1.2" filter="url(#dotGlow)" opacity="0">
+            <animate attributeName="opacity" values="0;0;0.85;0;0" keyTimes="0;0.787;0.812;0.837;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.2 0 0.8 1;0.2 0 1 1;0 0 1 1"/>
+            <animate attributeName="r" values="40;40;40;56;40" keyTimes="0;0.787;0.812;0.837;1" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0 0 1 1;0.2 0 1 1;0 0 1 1"/>
+          </circle>
+
           <!-- Single dot traveling the outer circumference -->
           <circle r="3" fill="rgba(255,255,255,0.9)" filter="url(#dotGlow)">
             <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear">
