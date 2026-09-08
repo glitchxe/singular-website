@@ -261,9 +261,10 @@
       position: relative; z-index: 1;
     }
     .eyebrow-dot {
-      width: 5px; height: 5px; border-radius: 50%;
+      width: 9px; height: 9px; border-radius: 50%;
       background: rgba(255,255,255,0.72);
       animation: dotPulse 2.5s ease-in-out infinite;
+      flex-shrink: 0;
     }
     @keyframes dotPulse {
       0%,100%{opacity:0.35} 50%{opacity:1}
